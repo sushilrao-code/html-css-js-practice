@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button</title>
+</head>
+<body>
+  <style>
+button { padding: 10px 20px; margin: 5px; cursor: pointer; transition: all 0.3s; }
+
+.round { border-radius: 50px; background: teal; color: white; }
+.round:hover { background: darkcyan; transform: scale(1.1); }
+.outline { background: transparent; border: 2px solid teal; color: teal; }
+.outline:hover { background: teal; color: white; }
+.shadow { background: orange; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+.shadow:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.5); background: darkorange; transform: translateY(-5px); }
+.gradient { background: linear-gradient(45deg, #ff6b6b, #f06595); color: white; background-size: 200% 200%; background-position: left; }
+.gradient:hover { background-position: right; transform: scale(1.05); }
+.animated { background: dodgerblue; color: white; transition: transform 0.3s; }
+.animated:hover { transform: scale(1.1) rotate(3deg); background: navy; }
+</style>
+
+<button class="round">Rounded</button>
+<button class="outline">Outline</button>
+<button class="shadow">Shadow</button>
+<button class="gradient">Gradient</button>
+<button class="animated">Animated</button>
+<style>
+.btn-underline {
+  position: relative;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: dodgerblue;
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: dodgerblue;
+  transition: width 0.3s;
+}
+
+.btn-underline:hover::after {
+  width: 100%;
+}
+</style>
+
+<button class="btn-underline">Underline Hover</button>
+</body>
+</html>
+

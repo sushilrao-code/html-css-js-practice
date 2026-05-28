@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm">
+      <label for="class">Class:</label>
+      <input type="text" id="class" name="class" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <h3>Address Details</h3>
+      <label for="address">Full Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="pincode">Pin Code:</label>
+      <input type="text" id="pincode" name="pincode" pattern="\d{6}" required>
+
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="signature">Upload Signature:</label>
+      <input type="file" id="signature" name="signature" accept="image/*" required>
+
+      <label>
+        <input type="checkbox" id="declaration" required>
+        I hereby declare that the information provided is true to the best of my knowledge.
+      </label>
+
+      <button type="submit">Submit</button>
+       document.getElementById("registrationForm").addEventListener("submit", function(e) {
+  const pincode = document.getElementById("pincode").value;
+  if (!/^\d{6}$/.test(pincode)) {
+    alert("Please enter a valid 6-digit pin code.");
+    e.preventDefault();
+    return false;
+  }
+
+  alert("Form submitted successfully!");
+});
+    </form>
+  </div>
+ 
+  
+</body>
+</html>

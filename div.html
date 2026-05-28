@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Carbon Footprint Calculator</h2>
+        
+        <div class="form-group">
+            <h3>Transportation</h3>
+            <label>Miles driven per week:</label>
+            <input type="number" id="miles" step="10">
+            
+            <label>Vehicle type:</label>
+            <select id="vehicle-type">
+                <option value="petrol">Petrol Car</option>
+                <option value="diesel">Diesel Car</option>
+                <option value="hybrid">Hybrid Car</option>
+                <option value="electric">Electric Vehicle</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Energy Usage</h3>
+            <label>Monthly electricity consumption (kWh):</label>
+            <input type="number" id="electricity">
+        </div>
+
+        <div class="form-group">
+            <h3>Diet</h3>
+            <label>Days per week eating meat:</label>
+            <input type="number" id="meat-days" min="0" max="7">
+        </div>
+
+        <button onclick="calculateFootprint()">Calculate</button>
+        
+        <div class="result" id="result">
+            <h3>Your Carbon Footprint</h3>
+            <p>Estimated annual CO₂ emissions: <span id="total">0</span> kg</p>
+        </div>
+    </div>
+
+    <script>
+       
+        const EMISSION_FACTORS = {
+            transportation: {
+                petrol: 0.4,    
+                diesel: 0.35,
+                hybrid: 0.2,
+                electric: 0.1
+            },
+            electricity: 0.5,   
+            diet: {
+                meat: 3.3       
+            }
+        };
+
+        function calculateFootprint() {
+           
+            const miles = parseFloat(document.getElementById('miles').value) || 0;
+            const vehicleType = document.getElementById('vehicle-type').value;
+            const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+            const meatDays = parseFloat(document.getElementById('meat-days').value) || 0;
+
+           
+            const transportCO2 = miles * 52 * EMISSION_FACTORS.transportation[vehicleType];
+            
+           
+            const energyCO2 = electricity * 12 * EMISSION_FACTORS.electricity;
+            
+           
+            const dietCO2 = meatDays * 52 * EMISSION_FACTORS.diet.meat;
+
+            
+            const totalCO2 = transportCO2 + energyCO2 + dietCO2;
+
+           
+            document.getElementById('total').textContent = totalCO2.toFixed(2);
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

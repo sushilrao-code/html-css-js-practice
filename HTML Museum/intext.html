@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Museum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🛒Welcome to the HTML Museum</h1>
+        <nav>
+
+            <a href="#heading-tags">Heading Tags || </a>
+            <a href="#paragraph-tag ">Paragraph Tag || </a>
+            <a href="#text-room">Text Room || </a>
+            <a href="#list-room">List Room ||</a>
+            <a href="#media-room">Media Room || </a>
+            <a href="#form-room">Form Room || </a>
+            <a href="#table-room">Table Room || </a>
+            <a href="#links-room">Link Room</a>
+            <a href="#semantic-room">Semantic Room</a>
+            <a href="#details-summary">Details & Summary</a>
+            <a href="#address">Address</a>
+            <a href="#code-related"> Code-Related</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h1>📘 HTML Tags Encyclopedia</h1>
+        <p>This page shows <b>common + advanced + rare HTML tags</b> with explanation, code, and live output.</p>
+        <hr>
+        <section class="section1" id="heading-tags">
+            <h1>🖋Heading tags</h1>
+
+
+            <h3>📕Definition of Heading Tags</h3>
+            <p>
+                Heading tags in HTML (&lt;h1&gt; to &lt;h6&gt;) are used to define titles and subtitles on a
+                webpage.
+                &lt;h1&gt; is the largest and most important heading, while &lt;h6&gt; is the smallest.
+                They provide structure to the content and help both users and search engines understand the
+                hierarchy of information.
+            </p>
+
+            <h2>Heading Code Example</h2>
+
+            <h3>Code:</h3>
+            <pre>
+    &lt;h1&gt;This is H1&lt;/h1&gt;
+    &lt;h2&gt;This is H2&lt;/h2&gt;
+    &lt;h3&gt;This is H3&lt;/h3&gt;
+    &lt;h4&gt;This is H4&lt;/h4&gt;
+    &lt;h5&gt;This is H5&lt;/h5&gt;
+    &lt;h6&gt;This is H6&lt;/h6&gt;
+                </pre>
+
+            <h3>Output:</h3>
+            <h1>This is H1</h1>
+            <h2>This is H2</h2>
+            <h3>This is H3</h3>
+            <h4>This is H4</h4>
+            <h5>This is H5</h5>
+            <h6>This is H6</h6>
+            <hr>
+            </div>
+        </section>
+        <section class="section2 " id="paragraph-tag ">
+            <h2>🤙Paragraph tag </h2>
+
+            <p>
+                Paragraph tag are used to add paragraphs to an HTML page.
+            </p>
+            <h3>Code Example</h3>
+
+            &lt;p&gt;This is p &lt;/p&gt;
+
+            <h3>Output</h3>
+            <p>This is P </p>
+            <hr>
+        </section>
+        <section class="section3" id="text-room">
+            <h2>Text Room</h2>
+            <pre>
+&lt;b&gt;Bold&lt;/b&gt;, &lt;i&gt;Italic&lt;/i&gt;, &lt;u&gt;Underline&lt;/u&gt;
+&lt;del&gt;Deleted&lt;/del&gt;, &lt;ins&gt;Inserted&lt;/ins&gt;
+&lt;strong&gt;Strong&lt;/strong&gt;, &lt;em&gt;Emphasis&lt;/em&gt;
+&lt;small&gt;smaller&lt;/small&gt;, &lt;sub&gt;subscript&lt;/sub&gt;
+&lt;mark&gt;marked&lt;/mark&gt;, &lt;sup&gt;superscript&lt;/sup&gt;
+
+
+  </pre>
+            <b>Bold</b>, <i>Italic</i>, <u>Underline</u>,
+            <del>Deleted</del>, <ins>Inserted</ins>,
+            <strong>Strong</strong>, <em>Emphasis</em>,
+            <small>Smaller</small>, <sub>Subscript</sub>,
+            <mark>Marked</mark>, <sup>Superscript</sup>
+            <hr>
+        </section>
+
+        <hr>
+        <section class="section4" id="list-room">
+            <h2>List Room</h2>
+            <pre>
+&lt;ul&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;&lt;li&gt;One&lt;/li&gt;&lt;/ol&gt;
+&lt;dl&gt;&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;Definition&lt;/dd&gt;&lt;/dl&gt;
+  </pre>
+            <h3>1) Unorderd list</h3>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+            <h3>2) Ordered list</h3>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+            </ol>
+            <h3>3)Definition list</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText</dd>
+            </dl>
+            <hr>
+        </section>
+        <section class="section5" id="media-room    ">
+            <h2>Media Room</h2>
+            <pre>
+&lt;figure&gt;
+&lt;img src="..." alt="Sample"&gt;
+&lt;figcaption&gt;Caption&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;audio controls&gt;...&lt;/audio&gt;
+&lt;video controls&gt;...&lt;/video&gt;
+&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;
+  </pre>
+            <h3>Images & Figure</h3>
+            <figure>
+                <img src="fill.png" alt="Sample">
+                <figcaption>Sample Caption</figcaption>
+            </figure>
+            <h3>Audio & Video</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+            <video width="200" controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <h3>Iframe</h3>
+            <iframe src="https://www.wikipedia.org/" width="250" height="100"></iframe>
+            <hr>
+        </section>
+        <section class="section6" id="form-room">
+            <h2>Form Room</h2>
+            <pre>
+&lt;form&gt;
+  Name: &lt;input type="text"&gt;
+  Email: &lt;input type="email"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+  </pre>
+            <form>
+                Name: <input type="text"><br>
+                Email: <input type="email"><br>
+                <input type="submit">
+            </form>
+            <hr>
+        </section>
+        <section class="section7" id="table-room">
+            <h2>Table Room</h2>
+            <pre>
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;th&gt;Name &lt;/th&gt;
+&lt;th&gt;Age &lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sushil&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+</pre>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>age</th>
+                </tr>
+                <td>Sushil</td>
+                <td>19</td>
+            </table>
+
+        </section>
+        <hr>
+        <section class="section8" id="links-room">
+            <h2>Links Room</h2>
+            <pre>
+&lt;a href="https://google.com"&gt;google&lt;/a&gt;
+&lt;a href="https://youtube.com"&gt;youtube&lt;/a&gt;
+</pre>
+            <a href="https://google.com">google</a>,
+            <a href="https://youtube.com">youtube</a>
+        </section>
+        <section class="section9" id="semantic-room">
+            <h2>Semantic Room</h2>
+            <pre>
+&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;section&gt;Section&lt;/section&gt;
+&lt;article&gt;Article&lt;/article&gt;
+&lt;aside&gt;Aside&lt;/aside&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;
+  </pre>
+            <header>Header</header>
+            <nav>Navigation</nav>
+            <section>Section</section>
+            <article>Article</article>
+            <aside>Aside</aside>
+            <footer>Footer</footer>
+            <hr>
+        </section>
+        <section class="section10" id="details-summary">
+            <h2> Details & Summary</h2>
+            <pre>
+&lt;details&gt;
+  &lt;summary&gt;Click me&lt;/summary&gt;
+  Hidden info
+&lt;/details&gt;
+  </pre>
+            <details>
+                <summary>Click me</summary>Hidden info
+            </details>
+            <hr>
+        </section>
+        <section class="section11" id="address">
+            <h2>Address </h2>
+            <pre>
+&lt;address&gt;Author info&lt;/address&gt;
+  </pre>
+            <address>Written by Sushil, India</address>
+            <hr>
+        </section>
+        <section class="section12" id="code-related">
+            <h2>19. Code-Related</h2>
+            <pre>
+&lt;code&gt;print("Hi")&lt;/code&gt;
+&lt;kbd&gt;Ctrl+C&lt;/kbd&gt;
+&lt;samp&gt;Output&lt;/samp&gt;
+&lt;var&gt;x&lt;/var&gt;
+  </pre>
+            <code>print("Hi")</code><br>
+            <kbd>Ctrl+C</kbd><br>
+            <samp>Sample Output</samp><br>
+            <var>x</var>
+            <hr>
+        </section>
+        
+
+    </main>
+    <h2 id="bottom">✅ End of HTML Museum</h2>
+
+</body>
+
+</html>

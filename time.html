@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin: 5px;
+        padding: 5px;
+        justify-self: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div  class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+
+    <script>
+      let boxes = document.querySelectorAll(".box");
+
+      function changeBoxColors() {
+        boxes.forEach((box) => {
+          let red = Math.floor(Math.random() * 256);
+          let green = Math.floor(Math.random() * 256);
+          let blue = Math.floor(Math.random() * 256);
+          box.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        });
+      }
+      let a = setInterval(() => {
+        changeBoxColors();
+      }, 2000);
+     
+    </script>
+  </body>
+</html>

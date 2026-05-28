@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <form id="myForm">
+        <div class="container">
+            <h1>Registration Form</h1>
+            <div class="section1">
+                <h3>Basic details</h3>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+                <label for="Middel Name">Middel Name</label>
+                <input type="text" id="Middel Name" name="Middel Name">
+
+                <label for="Last Name">Last Name</label>
+                <input type="text" id="Last Name" name="Last Name">
+
+
+                <div>
+                    <label for="Mother's Name">Mother's Name</label>
+                    <input type="text" id="Mother's name" name="Mother's Name">
+
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+
+                    <div>
+                        <label for="Father's Name">Father's Name</label>
+                        <input type="text" id="Father's Name" name="Father's Name">
+                        <label for="Phone Number">Phone Number</label>
+                        <input type="text" id="Phone Number" name="Phone Number" placeholder="(000) 000-0000">
+                        <label for="D.O.B">D.O.B</label>
+                        <input type="date" id="D.O.B" name="D.O.B">
+                    </div>
+                    <label for="Roll Number">Roll Number</label>
+                    <input type="text" id="Roll Number" name="Roll Number">
+                    <label for="Class">Class</label>
+                    <input type="text" id="Class" name="Class">
+                    <label for="Country">Country</label>
+                    <select id="Country" name="Country">
+                        <option value>--select--</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Other</option>
+                    </select>
+
+                    <div>
+                        <label>Gender</label>
+                        <label><input type="radio" name="gender" id="Gender" value="male">
+                            Male</label>
+                        <label><input type="radio" name="gender" id="Gender" value="female">
+                            Female</label>
+                    </div>
+                </div>
+
+
+                <div class="section2">
+                    <h3>Address Details</h3>
+
+                    <label for="address">Full Address:</label>
+                    <textarea id="address" name="address" rows="2"></textarea>
+
+                    <label for="pincode">Pincode</label>
+                    <input type="number" id="pincode" name="pincode">
+                    <label for="State">State</label>
+                    <select id="State" name="State">
+                        <option>--select--</option>
+                    </select>
+
+                    <label for="City">City</label>
+                    <input type="search" id="City" name="City">
+
+                </div>
+
+
+
+
+            </div>
+            <div class="section3">
+                <h3>Document Details</h3>
+                <label for="Upload Photo">Upload Photo</label>
+                <input type="file" id="Upload Photo" name="Upload Photo">
+                <label for="Upload Signature">Upload
+                    Signature</label>
+                <input type="file" id="Upload Signature" name="Upload Signature">
+
+                <label for="Address proof">Address Proof</label>
+                <input type="file" id="Address proof" name="Address proof">
+
+            </div>
+            <div>
+                <label for="agree the all details are correct">agree
+                    the
+                    all details are correct</label>
+                <input type="checkbox" id="agree the all details are correct" name="agree the all details are correct">
+            </div>
+            <div class="section4">
+                <h3>Education Details</h3>
+                <table>
+                    <tr>
+                        <th>Examination</th>
+                        <th>Board/University</th>
+                        <th>Year of Passing</th>
+                        <th>Percentage/CGPA</th>
+                    </tr>
+                    <tr>
+                        <td>10th</td>
+                        <td><input type="text" name="board_10"></td>
+                        <td><input type="text" name="year_10"></td>
+                        <td><input type="text" name="cgpa_10"></td>
+
+                    </tr>
+                    <tr>
+                        <td>12th</td>
+                        <td><input type="text" name="board_12"></td>
+                        <td><input type="text" name="year_12"></td>
+                        <td><input type="text" name="cgpa_12"></td>
+                    </tr>
+                    <tr>
+                        <td>B.Tech</b></td>
+                        <td><input type="text" name="board_B.Tech"></td>
+                        <td><input type="text" name="year_B.Tech"></td>
+                        <td><input type="text" name="cgpa_B.Tech"></td>
+
+                    </tr>
+
+                </table>
+
+                <div class="form-section">
+                    <label>Do you speak any languages other than
+                        English?</label>
+                    <div class="language-row">
+                        <label><input type="radio" name="other_languages" value="yes">
+                            Yes</label>
+                        <label><input type="radio" name="other_languages" value="no">
+                            No</label>
+                    </div>
+                </div>
+
+                <div class="submit-btn">
+                    <button  type="submit">submit</button>
+                </div>
+                <input type="checkbox" checked>agree the all details are
+                correct
+
+            </div>
+
+        </div>
+        </div>
+    </form>
+ 
+    <script src="script.js"></script>
+
+</body>
+
+</html>c

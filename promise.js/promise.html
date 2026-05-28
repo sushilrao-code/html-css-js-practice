@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+     <style>
+        body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+#output {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+  color: black;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+   
+    <h2>Data Load Simulator</h2>
+    <button onclick="LoadData()">LoadData</button>
+    <p id="output"></p>
+    <script>
+function LoadData(){
+    document.getElementById("output").innerText="loading";
+
+    let myPromise =new Promise(function(resovle,reject){
+        setTimeout(function(){
+            let success = true;
+            if(success){
+                resovle("Data Loaded successfully")
+            }
+            else{
+                reject("Error While Loading Data");
+            
+            }
+        },2000);
+    })
+    myPromise.then(function(result){
+        document.getElementById("output").innerText =result;
+    })
+    .catch(function(error){
+        document.getElementById("output").innerText =error;
+    });
+}
+    </script>
+    
+</body>
+</html>

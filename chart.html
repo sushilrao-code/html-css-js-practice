@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Health Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .form-section, .alert-section {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, button {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #0077b6;
+      color: white;
+      cursor: pointer;
+    }
+    .alert {
+      background-color: #ffcccb;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-left: 5px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Smart Health Surveillance</h1>
+  </header>
+
+  <div class="container">
+    <div class="form-section">
+      <h2>Report Health Case</h2>
+      <form id="healthForm">
+        <input type="text" id="name" placeholder="Patient Name" required />
+        <select id="symptom">
+          <option value="">Select Symptom</option>
+          <option value="Diarrhea">Diarrhea</option>
+          <option value="Cholera">Cholera</option>
+          <option value="Typhoid">Typhoid</option>
+          <option value="Hepatitis A">Hepatitis A</option>
+        </select>
+        <input type="text" id="location" placeholder="Village/Area" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="alert-section">
+      <h2>Recent Alerts</h2>
+      <div id="alerts"></div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('healthForm');
+    const alertsDiv = document.getElementById('alerts');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const symptom = document.getElementById('symptom').value;
+      const location = document.getElementById('location').value;
+
+      if (symptom && location) {
+        const alertMsg = `⚠️ Possible ${symptom} case reported in ${location} by ${name}`;
+        const alertBox = document.createElement('div');
+        alertBox.className = 'alert';
+        alertBox.textContent = alertMsg;
+        alertsDiv.prepend(alertBox);
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

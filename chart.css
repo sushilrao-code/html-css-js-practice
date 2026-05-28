@@ -1,0 +1,27 @@
+/* Heading styling */
+h1 {
+  color: red;
+  text-align: center;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+/* Button styling */
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: darkblue;
+}

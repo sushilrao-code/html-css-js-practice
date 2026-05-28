@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PIN Code Finder</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.loader {
+  display: none;
+  margin-top: 10px;
+  color: blue;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>PIN Code Finder</h2>
+
+      <input type="text" id="pincode" placeholder="Enter PIN code" />
+      <button onclick="getPincode()">Search</button>
+
+      <div id="loader" class="loader">Loading...</div>
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

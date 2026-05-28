@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+// let promise = new Promise((resolve,reject)=>{
+//     console.log("Pending...");
+//     setTimeout(()=>{
+//         resolve("kaa ho gaya")
+//     },2000)
+// });
+// promise.then((msg)=>{
+//     console.log(msg);
+// });
+
+// const newp = new Promise((resolve, reject) => {
+// success =true;
+//     if(success){
+//         resolve("done");
+      
+//     }else{
+//         reject("Error");
+      
+//     }
+    
+// });
+// promise
+// .then((result)=>{
+//     console.log(result);
+// });
+// newp.catch((error)=>{
+//     console.log(error);
+// });
+
+// let myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise resolved successfully!");
+//     }, 2000);
+// });
+// myPromise.then((result) => {
+//     console.log(result);
+// });
+
+function orderFood(){
+    return new Promise(resolve=>{
+        setTimeout(()=> resolve ("food delivered")
+    ,3000);
+    });
+}
+async function eat(){
+    console.log("order placed");
+    let food =await orderFood();
+    console.log(food);
+    console.log("Eating");
+}
+
+eat();
+
+
+    </script>
+</body>
+</html>
+

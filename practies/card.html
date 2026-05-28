@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card</title>
+        <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ac9c9c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+           
+               
+        }
+        .card{
+            background-color: #f8f9fa;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        
+        .card img{
+            width: 280px;
+            height: 200px;
+           object-fit: cover;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 12px;
+        }
+        .tags{
+            margin: 15px 0;
+        }
+        .tag{
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 0 5px;
+        }
+        
+        .card h2{
+            margin: 10px 0;
+            font-size: 22px;
+            color: #333;
+        }
+        .card p{
+            font-size: 14px;
+            color: #666;
+            padding: 0 15px;
+            line-height: 1.5;
+        }
+        .btn{
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+               .btn:hover{
+            background-color: #218838;
+               }
+      
+
+    </style>
+    </head>
+    <body>
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                alt="Laks">
+            "
+            <div class=" tags">
+                <span class="tag">Nature </span>
+                <span class="tag">Lake </span>
+            </div>
+            <h2>Beautiful Lake</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda explicabo perferendis maxime iusto, fugit ab dolor
+                quod molestiae eos,
+                repellat veniam alias consequuntur magni blanditiis tempora
+                atque unde omnis laborum.
+
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+    </body>
+</html>

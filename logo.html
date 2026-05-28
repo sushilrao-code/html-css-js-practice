@@ -1,0 +1,113 @@
+ !DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreativeCanvas Login</title>
+  <style>
+    body {
+      margin:0;
+      font-family: Arial, sans-serif ;
+      background-color:#58aee8 ;
+      background: linear-gradient(-45deg, #67d5f7, #6debc3, #3abdff,#07d3db);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     
+    }
+    @keyframes gradientMove{ 
+    0% {backgeound-position:0% 50%;}
+    50%{backgeound-position:100% 50%; }
+    100%{backgeound-position:0% 50%;}
+
+      
+    }
+
+    .container {
+      background: #0176c9;
+      
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      display: flex;
+      width: 800px;
+      overflow: hidden;
+    }
+
+    .left-box, .right-box {
+      padding: 30px;
+      width: 50%;
+    }
+
+    .left-box h1 {
+      margin-bottom: 15px;
+    }
+
+    .left-box p {
+      line-height: 1.6;
+    }
+
+    .right-box h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 2px 2px 5px   rgba(0, 0, 0, 0.2);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #235ab3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .create-account {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-box">
+      <h1>Welcome to CreativeCanvas</h1>
+      <p>
+        Here you'll find a collection of creative works, professional projects, and personal achievements.
+        The site is designed to showcase skill, experience, and a passion for continuous growth.
+        Feel free to explore the sections, view the work, and get inspired.
+        Thank you for visiting – your interest is truly appreciated!
+      </p>
+    </div>
+    <div class="right-box">
+      <h2>Login</h2>
+      <input type="text" class="input-field" placeholder="Username">
+      <input type="password" class="input-field" placeholder="Password">
+      <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button class="login-btn">Login</button>
+      <div class="create-account"><a href="#">Create Account</a></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+    body {
+      display: flex;
+     
+      background-color: #1f1f7e;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: #aa1b1b;
+      width: 300px;
+      padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+       
+    }
+    
+
+    
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #3498db;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+    
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+     
+    }
+
+    .btn:hover {
+      background-color: #2ecc71; /* green on hover */
+    }
+
+    
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+</head>
+<body>
+  <p>hello</p>
+
+    <script >
+        console.error("hello")
+       console.timeStamp("dfghjk")
+        console.warn("rtyuiom")
+         console.clear()
+         alert("hello")
+         let person={
+            name:"rao",
+            age:20,
+            city:"Alwar"
+         };
+         for(let key in person){
+            console.log(key,person[key]);
+
+         }
+         let number=[10,'sushil yadav',20,20.2];
+         for (const element of number) {
+            console.log(element)
+            
+         }
+         {
+         function sushil(a,b){
+            return a+b;
+           
+         }
+         let result =sushil(10,20,);
+         console.log("addition",result);
+        }
+        {
+            function add(c,d,name){
+                console.log(c+d,+""+name);
+            }
+            add(4,6,'sushil')
+        }
+          //function expression
+
+          const sushil=function(a,b){
+            return a*b;
+        }
+        console.log(sushil(5,4));
+        
+
+       // !Arrow function
+
+        sushil=()=>{
+           console.log("hello")
+        };
+        sushil();
+         add =(a,b)=>{
+            return a+b;
+        };
+        let a=add(8,9)
+        console.log(a)
+
+          let vote=(age)=>{
+          return  (age>=18)?  "eligible to vote" : "not eligible to vote";
+        }
+        console.log(vote(20));
+        console.log(vote(15));
+
+
+        let now =new Date();
+        console.log(now);
+
+        let d =new Date("2025-01-15");
+        console.log(d)
+        
+
+
+        let m =new Date().getFullYear()
+        console.log(m)
+
+        
+     
+console.log(innerText="hello")
+innerText="sushil"
+    </script>
+</body>
+</html>
