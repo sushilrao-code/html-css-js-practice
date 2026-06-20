@@ -1,0 +1,22 @@
+let text = " Java Script ,Apple,Banana,Apple";
+let tex1 = "Hello";
+
+console.log(text.split(","));
+console.log(text.length);
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text.slice(0, 5));
+console.log(text.substring(5, 10));
+console.log(text.replace("J", "A"));
+console.log(text.replaceAll("Apple", "dog"));
+console.log(text.includes("Java"));
+console.log(text.startsWith(" Java"));
+console.log(text.endsWith("Script"));
+console.log(text.split("Script"));
+console.log(text.trim());
+console.log(text.indexOf("S"));
+console.log(text.lastIndexOf("a"));
+console.log(text.charAt(7));
+console.log(text.concat(tex1));
+let result = text.split("").join("-");
+console.log(result);
